@@ -1,18 +1,18 @@
-#ifndef MECANUM_CONTROL_H
-#define MECANUM_CONTROL_H
+#ifndef DIFFDRIVE_CONTROL_H
+#define DIFFDRIVE_CONTROL_H
 
 #include "motor_control.h"
 
 
-class MecanumControl {
+class DiffDriveControl {
 private:
     MotorControl motor1, motor2, motor3, motor4;
-    float wheel_radius = 0.04; // Tekerlek yarıçapı (m)
-    float robot_length = 0.23; // Robotun uzunluğu / 2 (m)
-    float robot_width = 0.15; // Robotun genişliği / 2 (m)
+    float wheel_radius = 0.075; // Tekerlek yarıçapı (m)
+    float robot_length = 0.40; // Robotun uzunluğu / 2 (m)
+    float robot_width = 0.40; // Robotun genişliği (m) - iki tekerlek arası
 
 public:
-    MecanumControl(int motor1_pwm, int motor1_dir,
+    DiffDriveControl(int motor1_pwm, int motor1_dir,
                    int motor2_pwm, int motor2_dir,
                    int motor3_pwm, int motor3_dir,
                    int motor4_pwm, int motor4_dir)
@@ -49,4 +49,4 @@ public:
     }
 };
 
-#endif  // MECANUM_CONTROL_H
+#endif  // DIFFDRIVE_CONTROL_H

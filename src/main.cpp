@@ -12,7 +12,7 @@
 
 #include "motor_control.h"
 #include "motor_pins.h"
-#include "MecanumControl.h"
+#include "DiffDriveControl.h"
 
 
 MecanumControl mecanumRobot(MOTOR1_PWM, MOTOR1_DIR,
